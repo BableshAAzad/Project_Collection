@@ -10,9 +10,9 @@ function makerequest() {
         }
         return res.json()
     }).then((data) => {
-        document.getElementById("divData1").innerText = data.name
-        document.getElementById("divData2").innerText = data.roll
-        document.getElementById("divData3").innerText = data.stream
+        document.getElementById("divData1").innerText = `Name : ${data.name}`
+        document.getElementById("divData2").innerText = `Roll Number : ${data.roll}`
+        document.getElementById("divData3").innerText = `Stream : ${data.stream}`
 
     }).catch((error) => { console.log(error) })
 }
