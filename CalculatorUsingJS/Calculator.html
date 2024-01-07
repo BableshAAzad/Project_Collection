@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Using js</title>
+    <link rel="stylesheet" href="Calculator.css">
+</head>
+
+<body>
+    <h3 style="text-align: center; color: blueviolet;">Basic Calculator using HTML, CSS and JS</h3>
+    <table border="1px" cellspacing="4">
+        <thead>
+            <th colspan="5">
+                <section id="disp">0</section>
+            </th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="num" id="one" onclick="oneClick()">1</td>
+                <td class="num" id="two" onclick="twoClick()">2</td>
+                <td class="num" id="three" onclick="threeClick()">3</td>
+                <td id="ac" onclick="allClearedClick()">AC</td>
+            </tr>
+            <tr>
+                <td class="num" id="four" onclick="fourClick()">4</td>
+                <td class="num" id="five"onclick="fiveClick()">5</td>
+                <td class="num" id="six" onclick="sixClick()">6</td>
+                <td class="spNum" id="pluse" onclick="pluseClick()">+</td>
+            </tr>
+            <tr>
+                <td class="num" id="seven" onclick="sevenClick()">7</td>
+                <td class="num" id="eight" onclick="eightClick()">8</td>
+                <td class="num" id="nine" onclick="nineClick()">9</td>
+                <td class="spNum" id="minus" onclick="minusClick()">-</td>
+            </tr>
+            <tr>
+                <td class="spNum" id="perce" onclick="perceClick()">%</td>
+                <td class="num" id="zero" onclick="zeroClick()">0</td>
+                <td class="spNum" id="modulus" onclick="modulusClick()">/</td>
+                <td class="spNum" id="mux" onclick="muxClick()">*</td>
+            </tr>
+            <tr>
+                <td colspan="2" id="back" onclick="backClick()">Back</td>
+                <td colspan="2" id="equalTo" onclick="equalToClick()">=</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="Calculator.js"></script>
+</body>
+
+</html>
