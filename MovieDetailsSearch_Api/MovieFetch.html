@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Movie through Api</title>
+    <!-- ^ Animation cdn -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- ~ External css -->
+    <link rel="stylesheet" href="MovieFetch.css">
+</head>
+
+<body>
+    <section class="outerSec">
+        <h2>Search Movie Details</h2>
+        <div id="searchDiv">
+            <input type="text" name="moviename" id="movieNameEnter" placeholder="Enter Movies Name">
+            <input type="submit" value="Search Movie" id="sbmt">
+        </div>
+        <section id="moviePic" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000"></section>
+        <section id="mainDiv">
+        <div id="movieName" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+        </div>
+            <p id="released"></p>
+            <p id="imdbRating"></p>
+            <p id="runtime"></p>
+            <p id="genre"></p>
+            <p id="awards"></p>
+            <p id="boxOffice"></p>
+            <p id="language"></p>
+            <p id="country"></p>
+            <p id="director"></p>
+            <p id="writer"></p>
+            <p id="actors"></p>
+            <p id="plot"></p>
+        </section>
+    </section>
+    <!-- ~ External js -->
+    <script src="MovieFetch.js"></script>
+    <!-- ^ animation cdn -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+.outerSec{
+    margin-right: auto;
+    margin-left: auto;
+    /* border: 2px solid red; */
+    background-color: rgb(203, 224, 241);
+    border-radius: 2%;
+    box-shadow: 2px 3px 5px 5px rgba(0, 0, 0, 0.404);
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.outerSec h2{
+    color: rgb(0, 81, 255);
+    text-shadow: 0.2px 1px 1px green;
+}
+.outerSec #searchDiv{
+    margin: 0px 5px;
+}
+.outerSec #searchDiv input{
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: -3px -2px 3px rgb(36, 66, 68);
+}
+.outerSec #searchDiv #sbmt{
+    background-color: rgb(10, 160, 5);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 3px -2px 3px rgb(0, 238, 255);
+    transition: 2s;
+    transform: all 1s ease;
+}
+.outerSec #searchDiv #sbmt:hover{
+    color: rgb(252, 214, 4);
+    background-color: rgb(30, 30, 253);
+}
+.outerSec #moviePic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.outerSec #moviePic img{
+    width: 70%;
+    height: 100%;
+    margin-top: 3%;
+    border-radius: 5px;
+    box-shadow: -4px -4px 5px black;
+}
+.outerSec #mainDiv{
+    margin-left: 10%;
+}
+.outerSec #mainDiv #movieName{
+    background-color: rgba(130, 219, 177, 0.459);
+    width: fit-content;
+    padding: 0% 6%;
+    border-radius: 0% 30%;
+    box-shadow: 0.3px 0.1px 1px black;
+}
+.outerSec #mainDiv #released{
+    margin-top: 0px;
+}
+.outerSec #mainDiv #movieName h3,h2{
+    display: inline-block;
+}
+.outerSec #mainDiv #movieName h2{
+    color: brown;
+}
+#conHead{
+    color: rgb(46, 64, 168);
+    display: inline;
+    font-weight: 550;
+    text-shadow: 0.4px 0.2px 0.4px black;
+}
