@@ -1,0 +1,33 @@
+.mainDetailsDiv{
+    border: 1px solid red;
+    width: 30rem;
+    height: fit-content;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 1rem black;
+}
+.mainDetailsDiv section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainDetailsDiv section img{
+    width: 20rem;
+    height: 20rem;
+}
+
+.mainDetailsDiv section div h3{
+    margin-bottom: 1rem;
+}
+.mainDetailsDiv section div button{
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    border: none;
+    color: white;
+    background-color: blueviolet;
+    border-radius: 0.3rem;
+
+}
