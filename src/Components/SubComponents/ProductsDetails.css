@@ -1,5 +1,5 @@
 .mainDetailsDiv{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 30rem;
     height: fit-content;
     padding: 1rem;
@@ -7,7 +7,7 @@
     margin-right: auto;
     margin-top: 2rem;
     border-radius: 0.5rem;
-    box-shadow: 0.1rem 0.1rem 1rem black;
+    box-shadow: 0.1rem 0.1rem 1rem rgb(56, 13, 156);
 }
 .mainDetailsDiv section{
     display: flex;
@@ -15,8 +15,10 @@
     align-items: center;
 }
 .mainDetailsDiv section img{
-    width: 20rem;
-    height: 20rem;
+    width: 17rem;
+    height: 17rem;
+    margin: 1rem;
+    border-radius: 0.3rem;
 }
 
 .mainDetailsDiv section div h3{
