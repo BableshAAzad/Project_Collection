@@ -3,11 +3,14 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import "./ProductsDetails.css"
 import Loading from "../Loader/Loading"
+import { useDispatch } from 'react-redux'
+import { addProduct } from '../Store/Slices/UserSlice'
 
 function FakeProductDetails() {
     let { pid } = useParams()
     let [gitPro, setGitPro] = useState({});
     let [isloading, setIsLoading] = useState(false);
+    let dispatch = useDispatch();
 
     let getProducts = async () => {
         setIsLoading(true)
@@ -18,8 +21,9 @@ function FakeProductDetails() {
     useEffect(() => {
         getProducts();
     }, [])
-    let addToCard = () => {
-        console.log(gitPro)
+    let addNewProduct = (payload) => {
+        // console.log(payload)
+        dispatch(addProduct(payload));
     }
     return (
         <>
@@ -31,7 +35,7 @@ function FakeProductDetails() {
                     <img src={gitPro.image} alt="noPic" />
                     <div>
                         <h3>Price: {gitPro.price}</h3>
-                        <button onClick={addToCard}>Add To Card</button>
+                        <button onClick={()=>{addNewProduct(gitPro)}}>Add To Card</button>
                     </div>
                 </section>
                 <h4>Description: {gitPro.description}</h4>

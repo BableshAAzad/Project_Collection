@@ -3,11 +3,14 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import "./ProductsDetails.css"
 import Loading from "../Loader/Loading"
+import { useDispatch } from 'react-redux';
+import { addProduct } from '../Store/Slices/UserSlice';
 
 function GitHubProductsDetails() {
   let { pid } = useParams()
   let [gitPro, setGitPro] = useState({});
   let [isloading, setIsLoading] = useState(false);
+  let dispatch = useDispatch();
 
   let getProducts = async () => {
     setIsLoading(true)
@@ -18,8 +21,8 @@ function GitHubProductsDetails() {
   useEffect(() => {
     getProducts();
   }, [])
-  let addToCard = () => {
-    console.log(gitPro)
+  let addNewProduct = (payload) => {
+    dispatch(addProduct(payload));
   }
   return (
     <>
@@ -31,7 +34,7 @@ function GitHubProductsDetails() {
           <img src={gitPro.thumbnail} alt="noPic" />
           <div>
             <h3>Price: {gitPro.price}</h3>
-            <button onClick={addToCard}>Add To Card</button>
+            <button onClick={() => { addNewProduct(gitPro, gitPro.id+"g") }}>Add To Card</button>
           </div>
         </section>
         <h4>Description: {gitPro.description}</h4>
