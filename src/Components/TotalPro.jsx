@@ -1,9 +1,9 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { removeProduct, removeAllProduct } from './Store/Slices/UserSlice';
+import { removeProduct, removeAllProduct, totalProductsCout } from './Store/Slices/UserSlice';
 
 function TotalPro() {
-  let dispatch = useDispatch()
+  let dispatch = useDispatch();
   let data = useSelector((state) => {
     return state.users;
   })

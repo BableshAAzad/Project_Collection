@@ -15,8 +15,11 @@ let userSlice = createSlice({
         },
         removeAllProduct(state, action){
             return [];
+        },
+        totalProductsCout(state, action){
+            return state;
         }
     }
 })
 export default userSlice.reducer;
-export let {addProduct, removeProduct, removeAllProduct} = userSlice.actions
+export let {addProduct, removeProduct, removeAllProduct, totalProductsCout} = userSlice.actions
