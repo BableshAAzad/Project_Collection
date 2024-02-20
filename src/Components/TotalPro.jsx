@@ -30,7 +30,7 @@ function TotalPro() {
           </li>
         })}
       </ol>
-      <button onClick={deleteAllProducts}>Delete All User</button>
+      <button onClick={deleteAllProducts}>Delete All Products</button>
     </div>
   )
 }

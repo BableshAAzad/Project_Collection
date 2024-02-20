@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import "./ProductsDetails.css"
 import Loading from "../Loader/Loading"
@@ -11,6 +11,8 @@ function FakeProductDetails() {
     let [gitPro, setGitPro] = useState({});
     let [isloading, setIsLoading] = useState(false);
     let dispatch = useDispatch();
+    let navigate = useNavigate();
+
 
     let getProducts = async () => {
         setIsLoading(true)
@@ -24,6 +26,9 @@ function FakeProductDetails() {
     let addNewProduct = (payload) => {
         // console.log(payload)
         dispatch(addProduct(payload));
+        alert("Product is added in card....!!!");
+        navigate("/fakeProducts");
+
     }
     return (
         <>
@@ -35,7 +40,7 @@ function FakeProductDetails() {
                     <img src={gitPro.image} alt="noPic" />
                     <div>
                         <h3>Price: {gitPro.price}</h3>
-                        <button onClick={()=>{addNewProduct(gitPro)}}>Add To Card</button>
+                        <button onClick={() => { addNewProduct(gitPro) }}>Add To Card</button>
                     </div>
                 </section>
                 <h4>Description: {gitPro.description}</h4>

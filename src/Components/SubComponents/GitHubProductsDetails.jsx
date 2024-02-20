@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import "./ProductsDetails.css"
 import Loading from "../Loader/Loading"
 import { useDispatch } from 'react-redux';
@@ -11,6 +11,7 @@ function GitHubProductsDetails() {
   let [gitPro, setGitPro] = useState({});
   let [isloading, setIsLoading] = useState(false);
   let dispatch = useDispatch();
+  let navigate = useNavigate();
 
   let getProducts = async () => {
     setIsLoading(true)
@@ -23,6 +24,8 @@ function GitHubProductsDetails() {
   }, [])
   let addNewProduct = (payload) => {
     dispatch(addProduct(payload));
+    alert("Product is added in card....!!!");
+    navigate("/gitHubProducts")
   }
   return (
     <>
