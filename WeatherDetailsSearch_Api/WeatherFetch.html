@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Weather</title>
+    <!-- ^ Animation cdn -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="WeatherFetch.css">
+</head>
+
+<body>
+    <h2>Search Weather Details</h2>
+    <div>
+        <form>
+            <input type="text" name="cityname" id="cityname">
+            <input type="submit" value="Search Weather">
+        </form>
+    </div>
+    <section data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
+        <h1 id="city">City?</h1>
+        <p id="temp">Temprature?</p>
+        <p id="desciption">Detais?</p>
+        <p id="windS">Wind Speed?</p>
+    </section>
+
+    <script src="WeatherFetch.js"></script>
+    <!-- ^ animation cdn -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

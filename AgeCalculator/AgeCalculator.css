@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#secm {
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 1px solid green; */
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 2px 2px #57d8f8;
+}
+#secm:hover {
+    border-radius: 8px;
+    box-shadow: 2px 2px 3px 3px #57d8f8;
+}
+
+#secm #submitBtn{
+    border: none;
+    background-color: #89cce0;
+    padding: 4px;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 3px rgb(102, 134, 27);
+    transition: all 1s ease;
+}
+#secm #submitBtn:hover{
+    background-color: rgb(43, 241, 86);
+    color: rgb(8, 8, 141);
+    box-shadow: 2px 2px 2px 2px rgb(102, 134, 27);
+}
+
+#secm h2 {
+    color: #512e88;
+    text-shadow: 1px 1px 2px #a09d9d;
+}
+
+#secm div b {
+    display: inline;
+}
+
+#secm div #message {
+    color: red;
+}
+
+#secm #result {
+    color: #1e0fa8;
+}
+#secm #totalDays{
+    color: rgb(0, 132, 255);
+}

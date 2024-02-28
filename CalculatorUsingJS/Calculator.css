@@ -1,0 +1,77 @@
+table {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(91, 110, 75);
+    text-align: center;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+table thead th #disp {
+    background-color: rgb(79, 250, 184);
+    font-size: 30px;
+    width: 100%;
+    height: 30px;
+    padding: 5px 0px;
+    text-align: right;
+}
+
+table tbody tr td {
+    font-size: 30px;
+    padding: 5px;
+    width: 50px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+table tbody tr .num {
+    background-color: rgb(24, 66, 105);
+    color: rgb(206, 194, 236);
+    transition: all 1s ease;
+}
+
+table tbody tr .num:hover {
+    background-color: rgb(56, 110, 161);
+    color: white;
+}
+
+table tbody tr .spNum {
+    background-color: rgb(61, 148, 170);
+    transition: all 1s ease;
+}
+
+table tbody tr .spNum:hover {
+    background-color: rgb(86, 187, 212);
+}
+
+table tbody tr #ac {
+    background-color: rgb(56, 56, 233);
+    color: rgb(197, 187, 187);
+    transition: all 1s ease;
+}
+
+table tbody tr #ac:hover {
+    background-color: rgb(90, 90, 224);
+    color: white;
+}
+
+table tbody tr #back {
+    background-color: rgb(134, 67, 67);
+    color: rgb(226, 105, 105);
+    transition: all 0.5s ease;
+}
+table tbody tr #back::before {
+    content: '<--';
+}
+table tbody tr #back:hover{
+    background-color: rgb(177, 84, 84);
+    color: rgb(158, 49, 49);
+}
+
+table tbody tr #equalTo {
+    background-color: rgb(48, 197, 190);
+    transition: all 1s ease;
+}
+table tbody tr #equalTo:hover{
+    background-color: rgb(48, 197, 110);
+}
