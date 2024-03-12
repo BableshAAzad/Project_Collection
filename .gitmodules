@@ -1,0 +1,3 @@
+[submodule "blogJDBC"]
+	path = blogJDBC
+	url = https://github.com/BableshAAzad/Project_Collection.git
