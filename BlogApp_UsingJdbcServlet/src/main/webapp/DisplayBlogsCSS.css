@@ -1,0 +1,64 @@
+@charset "ISO-8859-1";
+
+body {
+	text-align: center;
+}
+h1{
+	color: orange;
+	text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0.1rem 0.1rem 1.5rem #005DFF;
+}
+
+table thead tr {
+	background-color: #CAF943;
+}
+
+table tbody tr .snoT {
+	color: blue;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+table tbody tr .mnameT {
+	color: #1A8425;
+	text-shadow: 0.03rem 0.01rem 0.01rem red;
+	font-size: 1.2rem;
+}
+
+table tbody tr .mpriceT {
+	text-shadow: 0.03rem 0.01rem 0.01rem #00FFFF;
+	font-size: 1.2rem;
+}
+
+table tbody tr .mbrandT {
+	font-size: 1.2rem;
+	color: black;
+	text-shadow: 0.03rem 0.01rem 0.01rem #00FFFF;
+}
+
+table tbody tr .deleteD {
+	background-color: #F95143;
+	padding: 0.2rem 0.5rem;
+	color: white;
+	border-radius: 0.3rem;
+	text-decoration: none;
+}
+table tbody tr .deleteD:hover{
+	box-shadow: 0.3rem 0.1rem 0.2rem #00FFFF;
+}
+
+table tbody tr .updateD {
+	background-color: #3EA6EE;
+	padding: 0.2rem 0.5rem;
+	color: white;
+	border-radius: 0.3rem;
+	text-decoration: none;
+}
+table tbody tr .updateD:hover{
+	box-shadow: 0.3rem 0.1rem 0.2rem black;
+}
