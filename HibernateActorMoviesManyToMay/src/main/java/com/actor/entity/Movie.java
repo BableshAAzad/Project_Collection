@@ -8,12 +8,10 @@ import javax.persistence.ManyToMany;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 @Entity
 @Getter
 @Setter
-@ToString
 public class Movie {
 	@Id
     private int movieId;
@@ -25,4 +23,11 @@ public class Movie {
     private String boxOfficeVerdict;
     @ManyToMany
     private List<Actor> actors;
+	@Override
+	public String toString() {
+		return "Movie [movieId=" + movieId + ", movieName=" + movieName + ", language=" + language + ", director="
+				+ director + ", genre=" + genre + ", boxOfficeCollection=" + boxOfficeCollection + ", boxOfficeVerdict="
+				+ boxOfficeVerdict + "]";
+	}
+    
 }
