@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="gadget" class="com.entity.Gadget" autowire="no">
+		<constructor-arg name="mobile" ref="mobile" />
+		<constructor-arg name="laptop" ref="laptop" />
+	</bean>
+
+	<bean id="laptop" class="com.entity.Laptop">
+		<constructor-arg name="laptopId" value="101" />
+		<constructor-arg name="laptopModel" value="HP Pro" />
+		<constructor-arg name="laptopBrand" value="HP" />
+		<constructor-arg name="laptopPrice" value="30000" />
+	</bean>
+
+	<bean id="mobile" class="com.entity.Mobile">
+		<constructor-arg name="mobileId" value="999" />
+		<constructor-arg name="mobileName" value="Realme 8 pro" />
+		<constructor-arg name="mobileBrand" value="Realme" />
+		<constructor-arg name="mobilePrice" value="12000" />
+	</bean>
+
+
+</beans> 

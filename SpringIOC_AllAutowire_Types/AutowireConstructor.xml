@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="gadget" class="com.entity.Gadget" autowire="constructor">
+		<constructor-arg name="mobile" ref="mobile" />
+		<constructor-arg name="mobile1" ref="mobile1" />
+		<constructor-arg name="laptop" ref="laptop" />
+		<constructor-arg name="laptop1" ref="laptop1" />
+	</bean>
+
+	<bean id="laptop" class="com.entity.Laptop">
+		<constructor-arg name="laptopId" value="101" />
+		<constructor-arg name="laptopModel" value="HP Pro" />
+		<constructor-arg name="laptopBrand" value="HP" />
+		<constructor-arg name="laptopPrice" value="30000" />
+	</bean>
+	
+	<bean id="laptop1" class="com.entity.Laptop">
+		<constructor-arg name="laptopId" value="102" />
+		<constructor-arg name="laptopModel" value="Apple Ultra" />
+		<constructor-arg name="laptopBrand" value="Apple" />
+		<constructor-arg name="laptopPrice" value="90000" />
+	</bean>
+
+	<bean id="mobile" class="com.entity.Mobile">
+		<constructor-arg name="mobileId" value="999" />
+		<constructor-arg name="mobileName" value="Realme 8 pro" />
+		<constructor-arg name="mobileBrand" value="Realme" />
+		<constructor-arg name="mobilePrice" value="12000" />
+	</bean>
+	
+	<bean id="mobile1" class="com.entity.Mobile">
+		<constructor-arg name="mobileId" value="888" />
+		<constructor-arg name="mobileName" value="Nokia 1610" />
+		<constructor-arg name="mobileBrand" value="Nokia" />
+		<constructor-arg name="mobilePrice" value="5000" />
+	</bean>
+
+
+</beans> 
