@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student1" class="com.stu.entity.Student" autowire="default">
+		<property name="studentId" value="101" />
+		<property name="studentName" value="Bablesh" />
+		<property name="studentEmail" value="bablesh@gmail.com" />
+		<property name="studentAge" value="19" />
+		<property name="courses">
+			<list>
+				<ref bean="course1" />
+				<ref bean="course2" />
+				<ref bean="course3" />
+				<ref bean="course4" />
+			</list>
+		</property>
+	</bean>
+	<bean id="student2" class="com.stu.entity.Student" autowire="default">
+		<property name="studentId" value="102" />
+		<property name="studentName" value="Kumar" />
+		<property name="studentEmail" value="kumar@gmail.com" />
+		<property name="studentAge" value="20" />
+		<property name="courses">
+			<list>
+				<ref bean="course1" />
+				<ref bean="course2" />
+				<ref bean="course3" />
+				<ref bean="course4" />
+			</list>
+		</property>
+	</bean>
+	<bean id="student3" class="com.stu.entity.Student" autowire="default">
+		<property name="studentId" value="103" />
+		<property name="studentName" value="AAzad" />
+		<property name="studentEmail" value="AAzad@gmail.com" />
+		<property name="studentAge" value="51" />
+		<property name="courses">
+			<list>
+				<ref bean="course1" />
+				<ref bean="course2" />
+				<ref bean="course3" />
+				<ref bean="course4" />
+			</list>
+		</property>
+	</bean>
+	<bean id="student4" class="com.stu.entity.Student" autowire="default">
+		<property name="studentId" value="104" />
+		<property name="studentName" value="Durgesh" />
+		<property name="studentEmail" value="dk@gmail.com" />
+		<property name="studentAge" value="44" />
+		<property name="courses">
+			<list>
+				<ref bean="course1" />
+				<ref bean="course2" />
+				<ref bean="course3" />
+				<ref bean="course4" />
+			</list>
+		</property>
+	</bean>
+
+
+
+
+
+
+	<bean id="course1" class="com.stu.entity.Course" autowire="default">
+		<property name="courseId" value="1" />
+		<property name="courseName" value="Java" />
+		<property name="coursePrice" value="40000" />
+		<property name="courseDuration" value="10 months" />
+		<property name="students">
+			<list>
+				<ref bean="student1" />
+				<ref bean="student2" />
+				<ref bean="student3" />
+				<ref bean="student4" />
+			</list>
+		</property>
+	</bean>
+	<bean id="course2" class="com.stu.entity.Course" autowire="default">
+		<property name="courseId" value="2" />
+		<property name="courseName" value="Python" />
+		<property name="coursePrice" value="30000" />
+		<property name="courseDuration" value="5 months" />
+		<property name="students">
+			<list>
+				<ref bean="student1" />
+				<ref bean="student2" />
+				<ref bean="student3" />
+				<ref bean="student4" />
+			</list>
+		</property>
+	</bean>
+	<bean id="course3" class="com.stu.entity.Course" autowire="default">
+		<property name="courseId" value="3" />
+		<property name="courseName" value="React" />
+		<property name="coursePrice" value="23000" />
+		<property name="courseDuration" value="7 months" />
+		<property name="students">
+			<list>
+				<ref bean="student1" />
+				<ref bean="student2" />
+				<ref bean="student3" />
+				<ref bean="student4" />
+			</list>
+		</property>
+	</bean>
+	<bean id="course4" class="com.stu.entity.Course" autowire="default">
+		<property name="courseId" value="4" />
+		<property name="courseName" value="SQL" />
+		<property name="coursePrice" value="25000" />
+		<property name="courseDuration" value="4 months" />
+		<property name="students">
+			<list>
+				<ref bean="student1" />
+				<ref bean="student2" />
+				<ref bean="student3" />
+				<ref bean="student4" />
+			</list>
+		</property>
+	</bean>
+
+
+</beans> 
