@@ -1,4 +1,4 @@
-package com.ab.serviceImpl;
+package com.ab.serviceimpl;
 
 import java.util.List;
 import java.util.Optional;
@@ -61,7 +61,7 @@ public class AuthorServiceImpl implements AuthorService {
 
 	@Override
 	public ResponseEntity<ResponseStructure<List<Author>>> findAuthorBetweenAge(int authorAge1, int authorAge2) {
-		List<Author> authors = authorRepository.findByAuthorAgeBetween(authorAge2, authorAge2);
+		List<Author> authors = authorRepository.findByAuthorAgeBetween(authorAge1, authorAge2);
 		if(authors.size() != 0) {
 			ResponseStructure<List<Author>> responseStructure = new ResponseStructure<>();
 			responseStructure.setMessage("Author finded");
@@ -107,13 +107,16 @@ public class AuthorServiceImpl implements AuthorService {
 
 	@Override
 	public ResponseEntity<ResponseStructure<Author>> deleteAuthorById(int authorId) {
-		ResponseStructure<Author> responseStructure = new ResponseStructure<>();
-		responseStructure.setMessage("Author Deleted successfully");
-		responseStructure.setStatusCode(HttpStatus.OK.value());
+		
 		Optional<Author> option = authorRepository.findById(authorId);
 		if(option.isPresent()) {
 			Author author = option.get();
+			
+			ResponseStructure<Author> responseStructure = new ResponseStructure<>();
+			responseStructure.setMessage("Author Deleted successfully");
+			responseStructure.setStatusCode(HttpStatus.OK.value());
 			responseStructure.setData(author);
+			
 			authorRepository.delete(author);
 			return new ResponseEntity<ResponseStructure<Author>>(responseStructure, HttpStatus.OK);
 		}else {
@@ -122,8 +125,17 @@ public class AuthorServiceImpl implements AuthorService {
 	}
 
 	@Override
-	public void deleteAllAuthorByNationality() {
-		// TODO Auto-generated method stub
+	public ResponseEntity<ResponseStructure<List<Author>>> deleteAllAuthorByNationality(String nationality) {
+		List<Author> deletedAuthors = authorRepository.deleteAuthorsByNationality(nationality);
+		if(deletedAuthors.size() != 0) {
+			ResponseStructure<List<Author>> responseStructure = new ResponseStructure<>();
+			responseStructure.setMessage(deletedAuthors.size()+", Authors deleted");
+			responseStructure.setStatusCode(HttpStatus.OK.value());
+			responseStructure.setData(deletedAuthors);
+			return new ResponseEntity<ResponseStructure<List<Author>>>(responseStructure ,HttpStatus.OK);
+		}else {
+			throw new AuthorNotFoundException("Nationality : "+nationality+", not found");
+		}
 
 	}
 
@@ -134,3 +146,4 @@ public class AuthorServiceImpl implements AuthorService {
 	}
 
 }
+

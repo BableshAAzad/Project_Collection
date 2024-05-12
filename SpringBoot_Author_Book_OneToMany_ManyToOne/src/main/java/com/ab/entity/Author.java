@@ -3,6 +3,7 @@ package com.ab.entity;
 import java.util.List;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
@@ -13,7 +14,7 @@ public class Author {
 	private String authorName;
 	private int authorAge;
 	private String nationality;
-	@OneToMany(mappedBy = "author")
+	@OneToMany(mappedBy = "author", fetch=FetchType.EAGER)
 	private List<Book> books;
 
 	public int getAuthorId() {

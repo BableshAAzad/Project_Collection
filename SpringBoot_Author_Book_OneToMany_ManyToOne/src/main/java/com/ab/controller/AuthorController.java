@@ -33,28 +33,36 @@ public class AuthorController {
 	public ResponseEntity<ResponseStructure<Author>> findAuthorById(@PathVariable int authorId) {
 		return authorService.findAuthorById(authorId);
 	}
-	
+
 	@GetMapping("/findAuthorByName/{authorName}")
-	public ResponseEntity<ResponseStructure<List<Author>>> findAuthorByName(@PathVariable String authorName){
+	public ResponseEntity<ResponseStructure<List<Author>>> findAuthorByName(@PathVariable String authorName) {
 		return authorService.findAuthorByName(authorName);
 	}
-	
+
 	@GetMapping("/findAuthorBetweenAge")
-	public ResponseEntity<ResponseStructure<List<Author>>>  findAuthorBetweenAge(@RequestParam int authorAge1, @RequestParam int authorAge2){
+	public ResponseEntity<ResponseStructure<List<Author>>> findAuthorBetweenAge(@RequestParam int authorAge1,
+			@RequestParam int authorAge2) {
 		return authorService.findAuthorBetweenAge(authorAge1, authorAge2);
 	}
+
 	@GetMapping("/findAllAuthors")
-	public ResponseEntity<ResponseStructure<List<Author>>> findAllAuthors(){
+	public ResponseEntity<ResponseStructure<List<Author>>> findAllAuthors() {
 		return authorService.findAllAuthors();
 	}
-	
-	@PutMapping("/updateAuthodById")
-	public  ResponseEntity<ResponseStructure<Author>> updateAuthorById(@RequestParam int authodId, @RequestBody Author author) {
-		return authorService.updateAuthorById(authodId, author);
+
+	@PutMapping("/updateAuthorById/{authorId}")
+	public ResponseEntity<ResponseStructure<Author>> updateAuthorById(@PathVariable int authorId,
+			@RequestBody Author author) {
+		return authorService.updateAuthorById(authorId, author);
 	}
-	
+
 	@DeleteMapping("/deleteAuthorById/{authorId}")
 	public ResponseEntity<ResponseStructure<Author>> deleteAuthorById(@PathVariable int authorId) {
 		return authorService.deleteAuthorById(authorId);
+	}
+
+	@DeleteMapping("/deleteAuthorByNationality/{nationality}")
+	public ResponseEntity<ResponseStructure<List<Author>>> deleteAllAuthorByNationality(@PathVariable String nationality) {
+		return authorService.deleteAllAuthorByNationality(nationality);
 	}
 }

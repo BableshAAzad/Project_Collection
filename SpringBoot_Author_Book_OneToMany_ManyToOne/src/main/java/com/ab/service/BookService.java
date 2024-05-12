@@ -1,7 +1,12 @@
 package com.ab.service;
 
+import org.springframework.http.ResponseEntity;
+
+import com.ab.entity.Book;
+import com.ab.utill.ResponseStructure;
+
 public interface BookService {
-	void addBook();
+	ResponseEntity<ResponseStructure<Book>> addBook(Book book, int authorId);
 
 	void findBookById();
 
