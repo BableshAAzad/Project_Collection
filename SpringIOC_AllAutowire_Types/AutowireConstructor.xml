@@ -4,12 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	 https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="gadget" class="com.entity.Gadget" autowire="constructor">
-		<constructor-arg name="mobile" ref="mobile" />
-		<constructor-arg name="mobile1" ref="mobile1" />
-		<constructor-arg name="laptop" ref="laptop" />
-		<constructor-arg name="laptop1" ref="laptop1" />
-	</bean>
+	<bean id="gadget" class="com.entity.Gadget" autowire="constructor" />
 
 	<bean id="laptop" class="com.entity.Laptop">
 		<constructor-arg name="laptopId" value="101" />

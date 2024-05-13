@@ -18,6 +18,7 @@ public class App {
 		case 1:
 			BeanFactory beanFactory = new XmlBeanFactory(new FileSystemResource("AutowireDefault.xml"));
 			Gadget gadget = (Gadget) beanFactory.getBean("gadget");
+			System.out.println(gadget);
 			break;
 		case 2:
 			BeanFactory beanFactory1 = new XmlBeanFactory(new FileSystemResource("AutowireNo.xml"));

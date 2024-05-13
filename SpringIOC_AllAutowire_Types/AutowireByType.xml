@@ -4,10 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	 https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="gadget" class="com.entity.Gadget" autowire="byType">
-		<property name="mobile" ref="mobile" />
-		<property name="laptop" ref="laptop" />
-	</bean>
+	<bean id="gadget" class="com.entity.Gadget" autowire="byType" />
 
 	<bean id="laptop" class="com.entity.Laptop">
 		<property name="laptopId" value="101" />
