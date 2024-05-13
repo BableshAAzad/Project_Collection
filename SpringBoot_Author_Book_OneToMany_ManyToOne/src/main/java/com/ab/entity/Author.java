@@ -2,6 +2,8 @@ package com.ab.entity;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
@@ -14,7 +16,9 @@ public class Author {
 	private String authorName;
 	private int authorAge;
 	private String nationality;
-	@OneToMany(mappedBy = "author", fetch=FetchType.EAGER)
+	
+	@OneToMany(mappedBy = "author", fetch = FetchType.EAGER)
+	@JsonManagedReference
 	private List<Book> books;
 
 	public int getAuthorId() {
@@ -55,6 +59,12 @@ public class Author {
 
 	public void setBooks(List<Book> books) {
 		this.books = books;
+	}
+
+	@Override
+	public String toString() {
+		return "Author [authorId=" + authorId + ", authorName=" + authorName + ", authorAge=" + authorAge
+				+ ", nationality=" + nationality + "]";
 	}
 
 }

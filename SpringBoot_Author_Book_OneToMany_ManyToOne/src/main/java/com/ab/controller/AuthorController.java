@@ -65,4 +65,9 @@ public class AuthorController {
 	public ResponseEntity<ResponseStructure<List<Author>>> deleteAllAuthorByNationality(@PathVariable String nationality) {
 		return authorService.deleteAllAuthorByNationality(nationality);
 	}
+	
+	@GetMapping("/findAuthorByBookId/{bookId}")
+	public ResponseEntity<ResponseStructure<Author>> findAuthorByBookId(@PathVariable int bookId) {
+		return authorService.findAuthorByBookId(bookId);
+	}
 }

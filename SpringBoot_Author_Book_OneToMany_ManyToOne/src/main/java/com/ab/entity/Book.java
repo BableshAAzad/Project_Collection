@@ -1,5 +1,7 @@
 package com.ab.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
@@ -13,6 +15,7 @@ public class Book {
 	private String language;
 	private String genre;
 	@ManyToOne
+	@JsonBackReference
 	private Author author;
 
 	public int getBookId() {
@@ -63,5 +66,10 @@ public class Book {
 		this.author = author;
 	}
 
-}
+	@Override
+	public String toString() {
+		return "Book [bookId=" + bookId + ", bookName=" + bookName + ", bookPrice=" + bookPrice + ", language="
+				+ language + ", genre=" + genre + "]";
+	}
 
+}

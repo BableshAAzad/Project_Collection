@@ -1,5 +1,7 @@
 package com.ab.service;
 
+import java.util.List;
+
 import org.springframework.http.ResponseEntity;
 
 import com.ab.entity.Book;
@@ -8,22 +10,22 @@ import com.ab.utill.ResponseStructure;
 public interface BookService {
 	ResponseEntity<ResponseStructure<Book>> addBook(Book book, int authorId);
 
-	void findBookById();
+	ResponseEntity<ResponseStructure<Book>> findBookById(int bookId);
 
-	void findBookByName();
+	ResponseEntity<ResponseStructure<List<Book>>> findBookByName(String bookName);
 
-	void findBookBetweenPrice();
+	ResponseEntity<ResponseStructure<List<Book>>> findBookBetweenPrice(int bookPrice1, int bookPrice2);
 
-	void findAllBooksByLanguage();
+	ResponseEntity<ResponseStructure<List<Book>>> findAllBooksByLanguage(String language);
 
-	void findAllBookByAuthorId();
+	ResponseEntity<ResponseStructure<List<Book>>> findAllBooksByAuthorId(int authorId);
 
-	void updateBookById();
+	ResponseEntity<ResponseStructure<Book>> updateBookById(int bookId, Book book);
 
-	void deleteBookByName();
+	ResponseEntity<ResponseStructure<List<Book>>> deleteBookByName(String bookName);
 
-	void deleteAllBookByGenre();
+	ResponseEntity<ResponseStructure<List<Book>>> deleteAllBookByGenre(String genre);
 
-	void deleteAllBookByAuthorId();
+	ResponseEntity<ResponseStructure<List<Book>>> deleteAllBooksByAuthorId(int authorId);
 
 }

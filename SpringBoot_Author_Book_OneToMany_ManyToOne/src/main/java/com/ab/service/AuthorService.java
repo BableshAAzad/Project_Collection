@@ -3,7 +3,6 @@ package com.ab.service;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.ab.entity.Author;
 import com.ab.utill.ResponseStructure;
@@ -25,6 +24,6 @@ public interface AuthorService {
 
 	ResponseEntity<ResponseStructure<List<Author>>> deleteAllAuthorByNationality(String nationality);
 
-	void findAuthorByBookId();
+	ResponseEntity<ResponseStructure<Author>> findAuthorByBookId(int bookId);
 
 }

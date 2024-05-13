@@ -14,9 +14,12 @@ public interface AuthorRepository extends JpaRepository<Author, Integer> {
 
 	@Query("select a from Author a where a.authorName = :aname")
 	List<Author> findAuthorByName(@Param("aname") String authorName);
+//	--------------------------------------------------------------------------------------
+//	List<Author> findByAuthorAgeBetween(int authorAge1, int authorAge2);
 
 //	@Query(value="select * from author a where a.author_age between :age1 and :age2", nativeQuery = true)
 //	List<Author> findByAuthorAgeBetween(@Param("age1") int authorAge1, @Param("age2") int authorAge2);
+	
 	@Query("select a from Author a where a.authorAge between :age1 and :age2")
 	List<Author> findByAuthorAgeBetween(@Param("age1") int authorAge1, @Param("age2") int authorAge2);
 	
