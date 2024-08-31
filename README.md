@@ -25,7 +25,7 @@ You can download the specific branch's code and use it directly, based on the la
 
 >- 🔍🧑‍💻 Movie Details Search
 <p align="center">
-  <img src="./project_images/movei_api.png" alt="movei_api" width="90%"/>
+  <img src="./project_images/movie_api.png" alt="movei_api" width="90%"/>
 </p>
 
 >- 😶‍🌫️⛅ Weather Report 
